@@ -1,0 +1,28 @@
+#weather-main-flex {
+    display: flex;
+    align-items: center;
+}
+
+#weather-main-flex #weather-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;   
+}
+
+@media screen and (max-width: 680px) {
+    #weather-main-flex {
+        flex-direction: column;
+    }
+
+    #weather-main-flex #weather-details-wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #weather-main-flex #weather-details-wrapper {
+        width: 110%;
+    }
+}
+

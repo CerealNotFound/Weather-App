@@ -1,0 +1,115 @@
+#now-temp-wrapper {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 15px;
+  background: #ffffff20;
+  border: solid 1px #fff;
+  -webkit-backdrop-filter: blur(80px);
+          backdrop-filter: blur(80px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem 0 2rem 2rem;
+  width: 55%;
+}
+
+#now-temp-wrapper #now-day {
+  font-size: 1.3rem;
+  padding: 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+#now-temp-wrapper #city-name {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.9rem;
+  padding-bottom: 0.5rem;
+}
+
+#now-temp-wrapper #now-temp {
+  list-style: none;
+  text-align: center;
+}
+
+#now-temp-wrapper #now-temp .clouds-image, #now-temp-wrapper #now-temp .clear-image, #now-temp-wrapper #now-temp .snow-image, #now-temp-wrapper #now-temp .rain-image, #now-temp-wrapper #now-temp .thunderstorm-image {
+  background: url("../../assets/clouds.png") no-repeat center center/contain;
+  width: 19rem;
+  height: 19rem;
+}
+
+#now-temp-wrapper #now-temp .clear-image {
+  background: url("../../assets/sun.png") no-repeat center center/contain;
+}
+
+#now-temp-wrapper #now-temp .snow-image {
+  background: url("../../assets/snow.png") no-repeat center center/contain;
+}
+
+#now-temp-wrapper #now-temp .rain-image {
+  background: url("../../assets/rain.png") no-repeat center center/contain;
+}
+
+#now-temp-wrapper #now-temp .thunderstorm-image {
+  background: url("../../assets/thunder.png") no-repeat center center/contain;
+}
+
+#now-temp-wrapper #now-temp #weather {
+  font-size: 1.45rem;
+}
+
+#now-temp-wrapper #now-temp .weather-li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#now-temp-wrapper #now-temp .weather-li #now-temprature {
+  font-size: 2rem;
+}
+
+#now-temp-wrapper #now-temp .weather-li .degree-icon {
+  width: 1rem;
+  height: 2.5rem;
+  background: url("https://api.iconify.design/wi/degrees.svg?color=white") no-repeat center center/contain;
+}
+
+@media screen and (max-width: 680px) {
+  #now-temp-wrapper {
+    width: 80%;
+    margin: 3rem 0 0 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #now-temp-wrapper {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  future-forecast-wrapper {
+    width: 20rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  future-forecast-wrapper {
+    width: 20rem;
+  }
+}
+/*# sourceMappingURL=NowTemp.css.map */

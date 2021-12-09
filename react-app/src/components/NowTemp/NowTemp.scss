@@ -1,0 +1,67 @@
+@import "../../styles/sass/mixins", "../../styles/sass/variables";
+
+#now-temp-wrapper {
+    @include textVariables;
+    @include componentDefalut;
+    @include flex-center-vertically;
+    margin: 3rem 0 2rem 2rem;
+    width: 55%;
+     
+    #now-day {
+        font-size: 1.3rem;
+        padding: 1rem;
+        text-align: left;
+        width: 100%;
+    }
+    
+    #city-name {
+        text-align: center;
+        margin-top: 3rem;
+        font-size: 1.9rem;
+        padding-bottom: 0.5rem;
+    }
+    
+    #now-temp {
+        list-style: none;
+        text-align: center;
+
+        @include weatherImageHandler;
+        
+        #weather {
+            font-size: 1.45rem;
+        }
+
+        .weather-li{
+            @include flex-center-vertically;
+            width: 100%;
+            justify-content: center;
+
+            #now-temprature {
+                font-size: 2rem;
+            }
+
+            .degree-icon {
+                width: 1rem;
+                height: 2.5rem;
+                background: $degree-icon;
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 680px) {
+    #now-temp-wrapper {
+        width: 80%;
+        margin: 3rem 0 0 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #now-temp-wrapper {
+        width: 90%;
+    }
+}
+
+@include componentLaptopLargeQueries(future-forecast-wrapper);

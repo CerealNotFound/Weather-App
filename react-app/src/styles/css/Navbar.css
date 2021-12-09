@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+nav {
+  background: #ffffff20;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+nav #search-bar, nav #units-menu {
+  background: #ffffff25;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  border-radius: 20px;
+  height: 2.5rem;
+  padding: 0.5rem;
+  color: #fff;
+  border: none;
+  margin: 0.5rem 2rem 0.5rem 2rem;
+}
+
+nav #search-bar:focus, nav #units-menu:focus {
+  outline: none;
+}
+
+nav #search-bar::-webkit-input-placeholder, nav #units-menu::-webkit-input-placeholder {
+  color: #ffffff95;
+}
+
+nav #search-bar:-ms-input-placeholder, nav #units-menu:-ms-input-placeholder {
+  color: #ffffff95;
+}
+
+nav #search-bar::-ms-input-placeholder, nav #units-menu::-ms-input-placeholder {
+  color: #ffffff95;
+}
+
+nav #search-bar::placeholder, nav #units-menu::placeholder {
+  color: #ffffff95;
+}
+
+@media screen and (max-width: 320px) {
+  nav #search-bar, nav #units-menu {
+    margin: 0.5rem 1rem 0.5rem 1rem;
+  }
+}
+
+nav #units-menu {
+  margin-left: 0;
+  padding-right: 0;
+}
+
+nav #units-menu option {
+  color: #000;
+}
+/*# sourceMappingURL=Navbar.css.map */

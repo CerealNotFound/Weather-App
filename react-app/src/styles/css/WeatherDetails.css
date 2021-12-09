@@ -1,0 +1,85 @@
+#weather-details-main {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 15px;
+  background: #ffffff20;
+  border: solid 1px #fff;
+  -webkit-backdrop-filter: blur(80px);
+          backdrop-filter: blur(80px);
+  margin-top: 3rem;
+  padding: 2.5rem;
+  width: 80%;
+}
+
+#weather-details-main #flex-1, #weather-details-main #flex-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+}
+
+#weather-details-main .flex-1 {
+  padding-bottom: 3rem;
+}
+
+#weather-details-main .degree-icon {
+  width: 0.5rem;
+  height: 1.5rem;
+  position: absolute;
+  background: url("https://api.iconify.design/wi/degrees.svg?color=white") no-repeat center center/contain;
+}
+
+#weather-details-main .down-arrow, #weather-details-main .up-arrow {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background: url("https://api.iconify.design/akar-icons/arrow-down.svg?color=white") no-repeat center center/contain;
+}
+
+#weather-details-main .up-arrow {
+  background: url("https://api.iconify.design/akar-icons/arrow-up.svg?color=white") no-repeat center center/contain;
+}
+
+#weather-details-main .min, #weather-details-main .max {
+  margin-right: 2rem;
+}
+
+#weather-details-main .weather-details {
+  text-align: center;
+}
+
+#weather-details-main .weather-details #weather-details-min, #weather-details-main .weather-details #weather-details-max {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#weather-details-main .weather-details #humidity-icon, #weather-details-main .weather-details #wind-icon {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  width: 1rem;
+  height: 1rem;
+  background: url("https://api.iconify.design/carbon/humidity.svg?color=white") no-repeat center center/contain;
+}
+
+#weather-details-main .weather-details #wind-icon {
+  background: url("https://api.iconify.design/fa-solid/wind.svg?color=white") no-repeat center center/contain;
+}
+
+@media screen and (max-width: 680px) {
+  weather-details-main {
+    width: 100%;
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=WeatherDetails.css.map */

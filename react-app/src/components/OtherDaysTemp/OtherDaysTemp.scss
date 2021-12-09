@@ -1,0 +1,85 @@
+@import "../../styles/sass/mixins", "../../styles/sass/variables";
+
+#future-forecast-wrapper {
+    @include flex-center-vertically;
+    @include textVariables;
+    @include componentDefalut;
+    margin: 2rem 0 2rem 0rem;
+    padding: 2.5rem;
+    width: 80%;
+
+    #future-day {
+        font-size: 1.2rem;
+    }
+
+    .none {
+        display: none;
+    }
+    
+    #future-forecast {
+        text-align: left;
+        list-style: none;
+
+        .right {
+            background: url('https://api.iconify.design/akar-icons/arrow-right.svg?color=white') no-repeat center center / contain;
+            width: 1.5rem;
+            height: 1.5rem;
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            transition: all 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+            &:hover {
+                cursor: pointer;
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+        }
+
+        .left {
+            @extend .right;
+            background: url('https://api.iconify.design/akar-icons/arrow-left.svg?color=white') no-repeat center center / contain;
+            left: 1rem;
+        }
+
+        #future-weather-image {
+            width: 10rem;
+            height: 10rem;
+        }
+
+        #min-max-wrapper {
+            display: flex;
+            font-size: 1.2rem;
+            position: absolute;
+            bottom: 1rem;
+            left: 2rem;
+
+            #min-wrapper {
+                margin-left: 1rem;
+            }
+        }
+    }
+    
+    @include weatherImageHandler;
+
+    .icon-up {
+        width: 2rem;
+        height: 2rem;
+        padding: 0.5rem;
+        background: $up-arrow;
+    }
+    
+    .icon-down {
+        @extend .icon-up;
+        background: $down-arrow;
+    }
+
+    #future-day {
+        width: 100%;
+        text-align: left;
+    }
+
+}
+
+@include smallComponentTabletQueries(future-forecast-wrapper);

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+@import '../../styles/sass/mixins';
+// @use '../../styles/sass/mixins';
+
+nav {
+    background: #ffffff20;
+    width: 100vw;
+    @include flex-center-vertically;
+    justify-content: flex-start;
+
+    #search-bar {
+        background: #ffffff25;
+        @include flex-center-vertically;
+        @include textVariables;
+        border-radius: 20px;
+        height: 2.5rem;
+        padding: 0.5rem;
+        color: #fff;
+        border: none;
+        margin: 0.5rem 2rem 0.5rem 2rem;
+    
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: #ffffff95;
+        }
+
+    }
+
+    @media screen and (max-width: 320px) {
+        #search-bar {
+            margin: 0.5rem 1rem 0.5rem 1rem;
+        }
+    }
+
+    #units-menu {
+        @extend #search-bar;
+        margin-left: 0;
+        padding-right: 0;
+
+        option {
+            color: #000;
+        }
+    }
+}
+

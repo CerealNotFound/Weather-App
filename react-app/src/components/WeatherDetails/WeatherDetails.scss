@@ -1,0 +1,80 @@
+@import "../../styles/sass/mixins", "../../styles/sass/variables";
+
+#weather-details-main {
+    @include textVariables;
+    @include componentDefalut;
+    margin-top: 3rem;
+    padding: 2.5rem;
+    width: 80%;
+
+    #flex-1 {
+        @include flex-center-vertically;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .flex-1 {
+        padding-bottom: 3rem;
+    }
+
+    #flex-2 {
+        @extend #flex-1;
+    }
+
+    .degree-icon {
+        width: 0.5rem;
+        height: 1.5rem;
+        position: absolute;
+        background: $degree-icon;
+    }
+
+    .down-arrow {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        background: $down-arrow;
+    }
+
+    .up-arrow {
+        @extend .down-arrow;
+        background: $up-arrow;
+    }
+
+    .min {
+        margin-right: 2rem;
+    }
+
+    .max {
+        @extend .min;
+    }
+
+    .weather-details {
+        text-align: center;
+
+        #weather-details-min {
+            margin-left: 1rem;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+
+        #weather-details-max {
+            @extend #weather-details-min;
+        }
+
+        #humidity-icon {
+            margin-left: 1rem;
+            font-size: 1.2rem;
+            width: 1rem;
+            height: 1rem;
+            background: url('https://api.iconify.design/carbon/humidity.svg?color=white') no-repeat center center / contain;
+        }
+
+        #wind-icon {
+            @extend #humidity-icon;
+            background: url('https://api.iconify.design/fa-solid/wind.svg?color=white') no-repeat center center / contain;
+        }
+    }
+}
+
+@include smallComponentTabletQueries(weather-details-main);

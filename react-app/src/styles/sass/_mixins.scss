@@ -1,0 +1,56 @@
+@mixin flex-center-vertically {
+    display: flex;
+    align-items: center;
+}
+
+$color-default: #fff;
+$font:  'Raleway', sans-serif;
+
+@mixin textVariables {
+    color: $color-default;
+    font-family: $font;
+}
+
+$component-background: #ffffff20;
+
+@mixin componentDefalut {
+    flex-direction: column;
+    border-radius: 15px;
+    background: $component-background;
+    border: solid 1px #fff;
+    backdrop-filter: blur(80px);
+}
+
+@mixin weatherImageHandler {
+    .clouds-image {
+        background: url("../../assets/clouds.png") no-repeat center center / contain;
+        width: 19rem;
+        height: 19rem;
+    }
+
+    .clear-image {
+        @extend .clouds-image;
+        background: url("../../assets/sun.png") no-repeat center center / contain;
+    }
+    .snow-image {
+        @extend .clouds-image;
+        background: url("../../assets/snow.png") no-repeat center center / contain;
+    }
+    .rain-image {
+        @extend .clouds-image;
+        background: url("../../assets/rain.png") no-repeat center center / contain;
+    }
+    .thunderstorm-image {
+        @extend .clouds-image;
+        background: url("../../assets/thunder.png") no-repeat center center / contain;
+    }
+}
+
+@mixin smallComponentTabletQueries ($componentWrapper) {
+    @media screen and (max-width: 680px) {
+        #{$componentWrapper} {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
